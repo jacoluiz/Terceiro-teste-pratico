@@ -28,6 +28,7 @@ public class CarrinhoPage extends CarrinhoElementsMap {
 	}
 	
 	public void navegarParaCheckout() {
+		wait.until(ExpectedConditions.elementToBeClickable(botaoCheckout));
 		botaoCheckout.click();
 	}
 }

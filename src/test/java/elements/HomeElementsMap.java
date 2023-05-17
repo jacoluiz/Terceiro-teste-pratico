@@ -19,6 +19,6 @@ public class HomeElementsMap extends UtilsElements{
 	@FindBy(xpath = "//div[@id='search']//input")
 	protected WebElement barraDePesquisa;
 	
-	@FindBy(xpath = "//div[@class = 'top6Products']//a[contains(@class, 'product')]//p[text() = 'HP PAVILION 15Z TOUCH LAPTOP']")
+	@FindBy(xpath = "//div[@class = 'top6Products']//a[contains(@class, 'product')]//p[text() = 'HP PAVILION 15Z TOUCH LAPTOP']/..")
 	protected WebElement resultadoPesquisa;
 }

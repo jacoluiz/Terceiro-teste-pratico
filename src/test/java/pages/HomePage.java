@@ -17,26 +17,29 @@ public class HomePage extends HomeElementsMap {
 	public void clicarBotaoSpecialOffer() {
 		wait.until(ExpectedConditions.elementToBeClickable(botaoSpecialOffer));
 		botaoSpecialOffer.click();
+		aguardarScroll();
 	}
 
 	public void clicarBotaoSeeOffer() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(botaoSeeOffer));
-		Thread.sleep(1500);
 		botaoSeeOffer.click();
 	}
 
 	public void pesquisarProduto() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(botaoAparecerBarraDePesquisa));
 		botaoAparecerBarraDePesquisa.click();
-		Thread.sleep(2000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='search']//input")));
 		barraDePesquisa.sendKeys(massa.getNameProduct());
 	}
 
 	public void clicarResultadoPesquisa() throws InterruptedException {
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(
+				By.xpath("//div[@class = 'top6Products']//a[contains(@class, 'product')][2]")));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//div[@class = 'top6Products']//a[contains(@class, 'product')]")));
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+				"//div[@class = 'top6Products']//a[contains(@class, 'product')]//p[text() = 'HP PAVILION 15Z TOUCH LAPTOP']/..")));
+
 		resultadoPesquisa.click();
 	}
 }

@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/features/", glue = { "gluecode" }, monochrome = true, dryRun = false)
+@CucumberOptions(features = "src/test/resources/features/", glue = { "gluecode" }, monochrome = true, dryRun = false)
 
 public class RunnerTest {
 }

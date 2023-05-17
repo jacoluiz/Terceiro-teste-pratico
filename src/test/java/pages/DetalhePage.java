@@ -109,7 +109,7 @@ public class DetalhePage extends DetalheElementsMap {
 	}
 
 	public void alterarQuantidade() {
-		campoQuantidade.sendKeys(Integer.toString(new Random().nextInt()));
+		campoQuantidade.sendKeys(Integer.toString(new Random().nextInt(100)));
 	}
 
 	private String sortearCor() {
